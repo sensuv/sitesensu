@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="SENSU: protetor solar facial de toque seco que vem com um leque. Entre na lista de espera.">
+<meta property="og:title" content="SENSU · Proteção solar facial">
+<meta property="og:description" content="SENSU: protetor solar facial de toque seco que vem com um leque. Entre na lista de espera.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/protetor.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='11' fill='%23C3453B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>SENSU · Proteção solar facial</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Shippori+Mincho:wght@400;500&display=swap">
+<style>
+/* Layout: página curta de lista de espera. Quatro blocos: produto, o porquê do leque, o gesto em dois passos, a lista. */
+:root{
+  --bg:#F8F6F1; --card:#FFFFFF; --band:#F1ECE4; --fg:#3B352F; --muted:#6F6359; --line:#E2DBD0;
+  --taupe:#9B8B7E; --shu:#C3453B; --on-fg:#FAFBF8;
+  --display:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",Georgia,serif;
+  --body:"Jost","Avenir Next","Century Gothic",system-ui,sans-serif;
+  --wrap:64rem; --r:14px;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-weight:400;font-size:1.0625rem;line-height:1.65}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(1.25rem,4vw,2.5rem)}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;line-height:1.25}
+p{margin:0;max-width:32em}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+img{display:block;width:100%;height:auto;border-radius:var(--r)}
+section{scroll-margin-top:5.5rem}
+.muted{color:var(--muted)}
+.eyebrow{display:block;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
+.btn{display:inline-block;font:inherit;font-size:.92rem;letter-spacing:.04em;padding:.7em 1.4em;border-radius:999px;border:1px solid var(--fg);background:var(--fg);color:var(--on-fg);text-decoration:none;cursor:pointer;white-space:nowrap}
+.btn:hover{opacity:.88}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+
+.fan{fill:none;stroke:var(--fg);stroke-linecap:round}
+.fan .sun{fill:var(--shu);stroke:none}
+.fan .rib{transform:rotate(var(--a));transform-origin:0 0}
+.logo{display:flex;flex-direction:column;align-items:center;gap:.3rem;text-decoration:none}
+.logo svg{width:2.2rem}
+.word{font-weight:300;letter-spacing:.34em;margin-right:-.34em;font-size:1rem}
+
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.top{padding-block:.8rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.top .btn{padding:.55em 1.1em;font-size:.82rem}
+
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,4rem);align-items:center}
+.blk{padding-block:clamp(2.75rem,7vw,4.5rem)}
+.blk h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-block:.7rem 1rem}
+.blk p+p{margin-top:.9em}
+
+.hero{padding-block:clamp(1.75rem,5vw,3.5rem)}
+.hero h1{font-size:clamp(1.9rem,3.3vw,2.5rem);margin-block:1rem 1.1rem}
+.hero h1 span{display:block}
+.hero .lead{font-size:1.12rem;color:var(--muted)}
+.tags{list-style:none;padding:0;margin:1.3rem 0 0;display:flex;flex-wrap:wrap;gap:.45rem}
+.tags li{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:.4em .9em;color:var(--muted);background:var(--card)}
+.tags .hi{background:var(--fg);border-color:var(--fg);color:var(--on-fg)}
+.cap{display:flex;margin-top:1.6rem;max-width:30rem;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.3rem}
+.cap input{flex:1;min-width:0;font:inherit;color:var(--fg);border:0;background:transparent;border-radius:999px;padding:.5em 1em}
+.note{font-size:.88rem;color:var(--muted);margin-top:.8rem}
+.shot{max-width:24rem;width:100%;justify-self:center}
+.shot img{aspect-ratio:4/5;object-fit:cover;object-position:50% 45%}
+.fanpic{margin:0}
+.fanpic img{aspect-ratio:4/3;object-fit:cover}
+.selo-wrap{position:relative}
+.selo{position:absolute;top:-1.6rem;right:-1.6rem;width:clamp(5.5rem,11vw,7.5rem);height:auto;transform:rotate(-12deg);filter:drop-shadow(0 4px 10px rgba(59,53,47,.18))}
+.selo .disc{fill:var(--fg)}
+.selo .dot{fill:var(--shu)}
+.selo text{fill:var(--on-fg);font-family:var(--body);font-size:9.2px;font-weight:500;letter-spacing:.14em}
+@media (prefers-reduced-motion: no-preference){.selo text{transform-origin:0 0;animation:girar 28s linear infinite}}
+@keyframes girar{to{transform:rotate(360deg)}}
+
+.fanpic figcaption{margin-top:.7rem;font-size:.85rem;letter-spacing:.04em;color:var(--muted)}
+
+.band{background:var(--band)}
+.steps{list-style:none;counter-reset:p;margin:1.75rem 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(1.5rem,5vw,4rem);border-top:1px solid var(--fg)}
+.steps li{counter-increment:p;padding-top:1.1rem;color:var(--muted)}
+.steps li::before{content:counter(p);display:block;font-family:var(--display);font-size:2.4rem;line-height:1;color:var(--taupe);margin-bottom:.6rem}
+.steps b{display:block;font-family:var(--display);font-weight:400;font-size:1.25rem;color:var(--fg);margin-bottom:.2rem}
+.gosto{font-family:var(--display);font-size:clamp(1.3rem,2.4vw,1.7rem);line-height:1.4;margin-top:clamp(2.25rem,6vw,3.5rem);max-width:none}
+#gesto{padding-bottom:0}
+
+.sporthead{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(1.5rem,5vw,4rem);align-items:end}
+.sporthead h2{margin-bottom:0}
+.sportpics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(.75rem,2vw,1.25rem);margin-top:1.75rem}
+.sportpics img{aspect-ratio:16/10;object-fit:cover}
+.prox{display:grid;grid-template-columns:minmax(0,1.79fr) minmax(0,.747fr);gap:clamp(.75rem,2vw,1.25rem);margin-top:1.25rem}
+.prox figure{margin:0}
+.prox figcaption{margin-top:.7rem;font-size:.92rem;color:var(--muted)}
+.prox b{display:block;font-family:var(--display);font-weight:400;font-size:1.2rem;color:var(--fg)}
+.list .two{align-items:start}
+#form-lista{display:grid;gap:1rem;background:var(--card);border-radius:var(--r);padding:clamp(1.4rem,4vw,2rem)}
+label{display:grid;gap:.3rem;font-size:.85rem;letter-spacing:.04em}
+#form-lista input[type=text],#form-lista input[type=email],#form-lista input[type=tel]{font:inherit;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:.7em .9em;width:100%}
+.ok{display:flex;gap:.7rem;align-items:flex-start;font-size:.85rem;color:var(--muted);letter-spacing:0;line-height:1.45}
+.ok input{margin-top:.25em;accent-color:var(--fg)}
+#aviso{font-size:.9rem;border-left:2px solid var(--fg);padding-left:.9rem}
+
+footer{padding-block:2.25rem;display:flex;flex-direction:column;align-items:center;gap:.6rem;font-size:.85rem;color:var(--muted);text-align:center;border-top:1px solid var(--line)}
+footer .row{display:flex;gap:.4rem 1.5rem;flex-wrap:wrap;justify-content:center}
+
+@media (max-width:50rem){
+  .two,.steps,.sporthead,.sportpics{grid-template-columns:minmax(0,1fr)}
+  .prox{grid-template-columns:minmax(0,1fr)}
+  .prox figure:last-child img{aspect-ratio:4/3;object-fit:cover}
+  .hero .shot{order:-1}
+  .cap{flex-direction:column;border-radius:var(--r);gap:.3rem}
+  .cap input{padding:.7em 1em}
+  .top .btn{font-size:.78rem;padding:.5em .95em}
+  .selo{right:-.5rem;top:-1.25rem}
+}
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap top">
+  <a class="logo" href="#inicio" aria-label="SENSU, início">
+    <svg class="fan" viewBox="-210 -212 420 232" stroke-width="9"><path d="M-193.2-51.8A200 200 0 0 1 193.2-51.8"/><line class="rib" style="--a:-75deg" y2="-200"/><line class="rib" style="--a:-50deg" y2="-200"/><line class="rib" style="--a:-25deg" y2="-200"/><line class="rib" style="--a:0deg" y2="-200"/><line class="rib" style="--a:25deg" y2="-200"/><line class="rib" style="--a:50deg" y2="-200"/><line class="rib" style="--a:75deg" y2="-200"/><circle class="sun" r="30"/></svg>
+    <span class="word">SENSU</span>
+  </a>
+  <a class="btn" href="#lista">Entrar na lista de espera</a>
+</div></header>
+
+<main>
+<section class="wrap hero two" id="inicio">
+  <div>
+    <span class="eyebrow">SENSU · proteção solar facial</span>
+    <h1><span>A fórmula que protege.</span> <span>A brisa que sela.</span></h1>
+    <p class="lead">Protetor solar facial de toque seco que vem com um leque. Um cuida da pele, o outro faz a brisa.</p>
+    <ul class="tags"><li>FPS 70</li><li>Toque seco</li><li>Sem resíduo branco</li><li class="hi">Acompanha um leque</li></ul>
+    <form class="cap" id="form-topo" novalidate>
+      <label class="vh" for="email-topo">Seu melhor e-mail</label>
+      <input id="email-topo" name="email" type="email" autocomplete="email" placeholder="Seu melhor e-mail" required>
+      <input class="vh" type="text" name="site" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" type="submit">Entrar na lista de espera</button>
+    </form>
+    <p class="note">Ao entrar, você aceita receber o aviso de lançamento da SENSU por e-mail.</p>
+    <p id="aviso-topo" class="note" role="status" hidden></p>
+  </div>
+  <div class="shot"><img src="img/protetor.jpg" alt="Frasco branco do protetor solar facial SENSU toque seco FPS 70, 60 mL, sobre uma pedra clara"></div>
+</section>
+
+<section class="band" id="leque">
+  <div class="wrap blk two">
+    <figure class="fanpic">
+      <div class="selo-wrap">
+        <img src="img/par.jpg" alt="Protetor solar SENSU FPS 70 à frente de um leque de papel e bambu aberto, sobre uma pedra clara">
+        <svg class="selo" viewBox="-60 -60 120 120" role="img" aria-label="Acompanha um leque">
+          <circle class="disc" r="58"/>
+          <path id="selo-arco" d="M0 43a43 43 0 1 1 0-86a43 43 0 1 1 0 86" fill="none"/>
+          <text><textPath href="#selo-arco" textLength="262" lengthAdjust="spacing">ACOMPANHA UM LEQUE · ACOMPANHA UM LEQUE · </textPath></text>
+          <circle class="dot" r="13"/>
+        </svg>
+      </div>
+      <figcaption><span lang="ja">扇子</span> · sensu, o leque que dobra e vai na bolsa</figcaption>
+    </figure>
+    <div>
+      <span class="eyebrow">Por que o leque?</span>
+      <h2>O mimo de se abanar</h2>
+      <p class="muted">Em japonês, o leque nasce de um verbo: <span lang="ja">扇ぐ</span>, abanar-se. Antes de ser um objeto, ele é um gesto que você faz por você.</p>
+      <p class="muted">Por isso toda SENSU vem com um. Ele dobra, vai na bolsa e abre quando você quiser.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap blk" id="gesto">
+  <span class="eyebrow">O gesto</span>
+  <h2>Dois passos, dez segundos</h2>
+  <ol class="steps">
+    <li><b>Passe o protetor</b>Espalhe sobre a pele limpa, antes de sair.</li>
+    <li><b>Abra o leque</b>Abane por dez segundos. A pele assenta, o rosto refresca.</li>
+  </ol>
+  <p class="gosto">A gente gosta de sol. Só vem com proteção.</p>
+</section>
+
+<section class="wrap blk" id="sport">
+  <div class="sporthead">
+    <div>
+      <span class="eyebrow">Em breve</span>
+      <h2>SENSU Sport</h2>
+    </div>
+    <p class="muted">O mesmo par, em versão de treino: protetor, leque esportivo e um estojo que vai junto pra pista, pra quadra e pra rua.</p>
+  </div>
+  <div class="sportpics">
+    <img src="img/sport1.jpg" alt="Frasco SENSU Sport, leque esportivo preto aberto e estojo cinza sobre um banco de concreto ao lado de uma pista de atletismo">
+    <img src="img/sport2.jpg" alt="Bastão SENSU Sport e leque esportivo dobrado dentro do estojo cinza, ao lado de uma pista de atletismo">
+    <img src="img/sport3.jpg" alt="Frasco SENSU Sport em tom areia, leque de bambu com sol vermelho e estojo bege sobre um banco de concreto ao lado de uma pista de atletismo">
+  </div>
+</section>
+
+<section class="wrap blk" id="futuro" style="padding-top:0">
+  <span class="eyebrow">Próximos lançamentos</span>
+  <h2>O que vem depois</h2>
+  <div class="prox">
+    <figure><img src="img/sticks.jpg" alt="Três bastões faciais SENSU com suas tampas: hidratante rosa, gel iluminador coral e sérum azul"><figcaption><b>Sticks faciais</b>Hidratante, gel iluminador e sérum, em bastão.</figcaption></figure>
+    <figure><img src="img/leavein.jpg" alt="Frasco verde de leave-in SENSU com um círculo vermelho no rótulo"><figcaption><b>Leave-in</b>O primeiro SENSU para o cabelo.</figcaption></figure>
+  </div>
+</section>
+
+<section class="band list" id="lista">
+  <div class="wrap blk two">
+    <div>
+      <span class="eyebrow">Lista de espera</span>
+      <h2>Saiba antes de todo mundo</h2>
+      <p class="muted">Avisamos quando o primeiro lote da SENSU estiver disponível. Tiragem limitada.</p>
+    </div>
+    <form id="form-lista" novalidate>
+      <label for="nome">Nome<input id="nome" name="nome" type="text" autocomplete="name" required></label>
+      <label for="email">E-mail<input id="email" name="email" type="email" autocomplete="email" required></label>
+      <label for="zap">WhatsApp (opcional)<input id="zap" name="zap" type="tel" autocomplete="tel"></label>
+      <label class="ok" for="aceite"><input id="aceite" name="aceite" type="checkbox" required><span>Aceito receber o aviso de lançamento da SENSU por e-mail ou WhatsApp. Posso sair da lista quando quiser.</span></label>
+      <input class="vh" type="text" name="site" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" type="submit">Entrar na lista de espera</button>
+      <p id="aviso" role="status" hidden></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <span>Feita em Campinas, por dois irmãos.</span>
+  <div class="row"><span>[e-mail de contato]</span><span>Instagram [a definir]</span></div>
+  <div class="row"><span>© 2026 SENSU · Campinas, SP</span><span>CNPJ [nº]</span></div>
+</footer>
+
+<script>
+(function(){
+  // Endereço do Apps Script da planilha. Vazio = formulário em modo prévia.
+  var ENDPOINT='https://script.google.com/macros/s/AKfycbxWCMgdJqhiL6VZ2x2kMd7BMFpSLLy1X4L9eFR4NNGhlqdzskxyXaMucWmnej_TSvClXA/exec';
+  var MSG={
+    previa:'Este formulário ainda é uma prévia e não está ligado a uma lista. Nada foi enviado.',
+    ok:'Pronto, você está na lista. A gente avisa quando abrir.',
+    erro:'Não conseguimos registrar agora. Confira sua conexão e tente de novo.',
+    enviando:'Enviando…'
+  };
+  function enviar(dados,aviso,botao,form){
+    if(!ENDPOINT){aviso.textContent=MSG.previa;aviso.hidden=false;return;}
+    aviso.textContent=MSG.enviando;aviso.hidden=false;botao.disabled=true;
+    fetch(ENDPOINT,{method:'POST',mode:'no-cors',body:new URLSearchParams(dados)})
+      .then(function(){aviso.textContent=MSG.ok;form.reset();})
+      .catch(function(){aviso.textContent=MSG.erro;})
+      .then(function(){botao.disabled=false;});
+  }
+  var f=document.getElementById('form-lista'), a=document.getElementById('aviso');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!f.nome.value.trim()||!f.email.value||!f.email.validity.valid||!f.aceite.checked){
+      a.textContent='Preencha nome, um e-mail válido e marque o aceite para entrar na lista.';a.hidden=false;return;
+    }
+    enviar({nome:f.nome.value.trim(),email:f.email.value.trim(),zap:f.zap.value.trim(),aceite:'sim',origem:'formulário',site:f.site.value},a,f.querySelector('button'),f);
+  });
+  var t=document.getElementById('form-topo'), at=document.getElementById('aviso-topo');
+  t.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!t.email.value||!t.email.validity.valid){at.textContent='Digite um e-mail válido para entrar na lista.';at.hidden=false;return;}
+    enviar({nome:'',email:t.email.value.trim(),zap:'',aceite:'sim',origem:'topo',site:t.site.value},at,t.querySelector('button'),t);
+  });
+})();
+</script>
+</body>
+</html>
